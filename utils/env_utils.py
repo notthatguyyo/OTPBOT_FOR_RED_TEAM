@@ -76,16 +76,17 @@ def reload_configuration():
         from config.settings import Config
 
         # Update Config class attributes
-        Config.TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
-        Config.TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
-        Config.TWILIO_PHONE_NUMBER = os.environ.get('TWILIO_PHONE_NUMBER')
-        Config.ELEVENLABS_API_KEY = os.environ.get('ELEVENLABS_API_KEY')
-        Config.ELEVENLABS_DEFAULT_VOICE = os.environ.get('ELEVENLABS_DEFAULT_VOICE', 'Rachel')
-        Config.TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
-        Config.TELEGRAM_PUBLIC_CHAT = os.environ.get('TELEGRAM_PUBLIC_CHAT')
-        Config.NGROK_URL = os.environ.get('NGROK_URL')
-        Config.WEBHOOK_SECRET = os.environ.get('WEBHOOK_SECRET', 'webhook-secret-2025')
-        Config.DEFAULT_SPOOF_NUMBER = os.environ.get('DEFAULT_SPOOF_NUMBER', '+12109647678')
+    # Use standard environment variable names (no hard-coded secrets)
+    Config.TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
+    Config.TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
+    Config.TWILIO_PHONE_NUMBER = os.environ.get('TWILIO_PHONE_NUMBER')
+    Config.ELEVENLABS_API_KEY = os.environ.get('ELEVENLABS_API_KEY')
+    Config.ELEVENLABS_DEFAULT_VOICE = os.environ.get('ELEVENLABS_DEFAULT_VOICE', 'Rachel')
+    Config.TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+    Config.TELEGRAM_PUBLIC_CHAT = os.environ.get('TELEGRAM_PUBLIC_CHAT')
+    Config.NGROK_URL = os.environ.get('NGROK_URL')
+    Config.WEBHOOK_SECRET = os.environ.get('WEBHOOK_SECRET', 'webhook-secret-2025')
+    Config.DEFAULT_SPOOF_NUMBER = os.environ.get('DEFAULT_SPOOF_NUMBER', '+18333669821')
 
         logger.info("Configuration reloaded successfully")
 
