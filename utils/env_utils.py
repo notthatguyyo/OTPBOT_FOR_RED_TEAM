@@ -88,10 +88,8 @@ def reload_configuration():
     Config.WEBHOOK_SECRET = os.environ.get('WEBHOOK_SECRET', 'webhook-secret-2025')
     Config.DEFAULT_SPOOF_NUMBER = os.environ.get('DEFAULT_SPOOF_NUMBER', '+18333669821')
 
-        logger.info("Configuration reloaded successfully")
 
-    except Exception as e:
-        logger.error(f"Error reloading configuration: {e}")
+
 
 def get_env_variable(key: str, default: str = None) -> str:
     """
