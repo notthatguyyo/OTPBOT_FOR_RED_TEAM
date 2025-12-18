@@ -305,6 +305,6 @@ def create_app():
             # Initialize Telegram service
             telegram_service = TelegramService()
 
-            # Run the app
+            # Run the app111
             port = int(os.environ.get('PORT', 5000))
             app.run(host='0.0.0.0', port=port, debug=True)
