@@ -9,3 +9,10 @@ gunicorn==21.2.0
 pyngrok==7.0.0
 asyncio
 aiohttp==3.9.1
+
+# OpenTelemetry tracing (optional)
+opentelemetry-api>=1.21.0
+opentelemetry-sdk>=1.21.0
+opentelemetry-instrumentation-flask>=0.37b0
+opentelemetry-instrumentation-requests>=0.37b0
+opentelemetry-exporter-otlp>=1.12.0

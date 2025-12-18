@@ -23,11 +23,20 @@ logger = logging.getLogger("eval")
 
 def load_app():
     try:
-        # Import app from root `app.py` (expects `app` variable)
-        from app import app
-        return app
+        # Prefer the clean factory in `app_main.py` to avoid importing
+        # a corrupted `app.py` during automated runs.
+        from app_main import create_app
+        return create_app()
     except Exception as e:
-        return {'error': f'Failed importing app: {e}'}
+        # Provide a clearer message for missing dependencies
+        msg = str(e)
+        if isinstance(e, ModuleNotFoundError):
+            missing = e.name
+            msg = (
+                f"Missing Python package: {missing}.\n"
+                "Run `pip install -r requirements.txt` in the project root and try again."
+            )
+        return {'error': f'Failed importing app: {msg}'}
 
 
 def check_health_endpoints(client):

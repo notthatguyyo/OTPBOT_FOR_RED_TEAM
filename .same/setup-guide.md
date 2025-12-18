@@ -1,6 +1,6 @@
 # 🚀 OTP Voice App - Complete Setup Guide
 
-Your Flask app with **Advanced Call Control Features** is now running at: `http://localhost:5000`
+Your Flask app wi`th **Advanced Call Control Features** is now running at: http://localhost:50003
 
 ## ✨ **What's Already Working**
 ✅ **Web Interface**: Modern dashboard with call control
@@ -18,7 +18,7 @@ Your Flask app with **Advanced Call Control Features** is now running at: `http:
 ### **🌟 Key Features:**
 - **Visual Configuration Panel**: Tabbed interface for each service
 - **Real-time Validation**: Test your API keys immediately
-- **Status Indicators**: See which services are configured at a glance
+- **Status Indicators**: See which services are configur     at a glance
 - **Secure Updates**: Automatic .env file management
 - **Configuration Testing**: Verify connections before using
 
@@ -42,7 +42,7 @@ Your Flask app with **Advanced Call Control Features** is now running at: `http:
 
 **Configure in Web Interface:**
 1. Click **📞 Twilio** tab
-2. Enter **Account SID**: `ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+2. 00000000000000000000000000000Enter **Account SID**: `ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 3. Enter **Auth Token**: Your auth token
 4. Enter **Phone Number**: `+1234567890`
 5. Click **💾 Save Twilio Config**
@@ -199,6 +199,6 @@ Once configured, use these commands:
 4. **Monitor** → Watch the live call dashboard
 5. **Control** → Use advanced call features
 
-**Visit your app at: http://localhost:5000**
+**Visit your app at: http://localhost:5000
 
 🎉 **Enjoy your production-ready OTP voice system with advanced call control!**
